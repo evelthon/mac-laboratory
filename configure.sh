@@ -23,6 +23,11 @@ if [[ $currentDomain -ne 'ucy.ac.cy' ]]; then
   #exit 1
 fi
 
+
+# Install Kyocera driver
+sudo installer -verbose -pkg Kyocera\ OS\ X\ 10.5+\ build\ 2016.05.15.pkg -target /
+
+
 for home in $(ls /Users | grep -v localadmin | grep -v Shared | grep -v library | grep -v admin)
 do
 #echo $home
