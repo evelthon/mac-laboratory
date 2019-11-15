@@ -51,5 +51,8 @@ sudo dscl . -delete /Users/$home
 rm -rf /Users/$home
 done
 
+# Install profile command
+/usr/bin/profiles -I -F <filename>.mobileconfig
+
 
 # Add echo message to do a visudo and add cronjob for shutdown
