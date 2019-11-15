@@ -31,6 +31,9 @@ sudo installer -verbose -pkg Kyocera\ OS\ X\ 10.5+\ build\ 2016.05.15.pkg -targe
 # Wake-up/Boot daily at 07:30
 sudo pmset repeat wakeorpoweron MTWRFSU 07:30:00
 
+# Set display sleep after 60 minutes, when connected on power adapter
+sudo systemsetup -setdisplaysleep 60
+
 
 for home in $(ls /Users | grep -v localadmin | grep -v Shared | grep -v library | grep -v admin)
 do
