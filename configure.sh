@@ -38,7 +38,8 @@ sudo systemsetup -setdisplaysleep 60
 
 # Start screen saver after 5 minutes
 
-# Require password to unlock immediately after screen saver begins.
+# Require password to unlock immediately after screen saver begins (askforpasswordimmediately.mobileconfig)
+/usr/bin/profiles -I -F profiles/askforpasswordimmediately.mobileconfig
 
 # Install force logout & shutdown
 
