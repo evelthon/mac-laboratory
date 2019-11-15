@@ -27,6 +27,8 @@ fi
 # Install Kyocera driver
 sudo installer -verbose -pkg Kyocera\ OS\ X\ 10.5+\ build\ 2016.05.15.pkg -target /
 
+# Instal Papercut client & install plist
+
 
 # Wake-up/Boot daily at 07:30
 sudo pmset repeat wakeorpoweron MTWRFSU 07:30:00
@@ -38,9 +40,16 @@ sudo systemsetup -setdisplaysleep 60
 
 # Require password to unlock immediately after screen saver begins.
 
+# Install force logout & shutdown
+
+# Install profile clean-up script & plist
+
 for home in $(ls /Users | grep -v localadmin | grep -v Shared | grep -v library | grep -v admin)
 do
 #echo $home
 sudo dscl . -delete /Users/$home
 rm -rf /Users/$home
 done
+
+
+# Add echo message to do a visudo and add cronjob for shutdown
