@@ -37,8 +37,9 @@ sudo pmset repeat wakeorpoweron MTWRFSU 07:30:00
 sudo systemsetup -setdisplaysleep 60
 
 
-# Create folder to store scripts
+# Create folder to store scripts and copy them
 mkdir /Users/admin/scripts
+cp scripts/ /Users/admin/scripts
 
 # Start screen saver after 5 minutes
 
