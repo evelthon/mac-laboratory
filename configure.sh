@@ -36,6 +36,10 @@ sudo pmset repeat wakeorpoweron MTWRFSU 07:30:00
 # Set display sleep after 60 minutes, when connected on power adapter
 sudo systemsetup -setdisplaysleep 60
 
+
+# Create folder to store scripts
+mkdir /Users/admin/scripts
+
 # Start screen saver after 5 minutes
 
 # Require password to unlock immediately after screen saver begins (askforpasswordimmediately.mobileconfig)
