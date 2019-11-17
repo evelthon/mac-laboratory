@@ -69,4 +69,7 @@ fi
 
 
 
-# Add echo message to do a visudo and add cronjob for shutdown
+# Add cronjob for shutdown procedure (execute at 00:15)
+# 15 0 * * * sudo /Users/admin/scripts/logoutUser.sh >/dev/null 2>&1 
+(crontab -l 2>/dev/null; echo "15 0 * * * sudo /Users/admin/scripts/logoutUser.sh >/dev/null 2>&1 ") | crontab -
+
