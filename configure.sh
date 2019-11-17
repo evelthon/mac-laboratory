@@ -45,6 +45,7 @@ cp scripts/ /Users/admin/scripts
 # Start screen saver after 5 minutes
 
 # Require password to unlock immediately after screen saver begins (askforpasswordimmediately.mobileconfig)
+# TODO: install all mobileconfigs through a loop.
 /usr/bin/profiles -I -F profiles/askforpasswordimmediately.mobileconfig
 
 # Allow admin user to execute cron command as sudo w/o password.
@@ -63,15 +64,7 @@ fi
 
 # Install profile clean-up script & plist
 
-for home in $(ls /Users | grep -v localadmin | grep -v Shared | grep -v library | grep -v admin)
-do
-#echo $home
-sudo dscl . -delete /Users/$home
-rm -rf /Users/$home
-done
 
-# Install profile command
-/usr/bin/profiles -I -F <filename>.mobileconfig
 
 
 # Add echo message to do a visudo and add cronjob for shutdown
