@@ -50,7 +50,6 @@ chmod 744 /Users/admin/scripts/startup.sh
 for filename in profiles/*.mobileconfig; do
     /usr/bin/profiles -I -F profiles/$filename
 done
-/usr/bin/profiles -I -F profiles/askforpasswordimmediately.mobileconfig
 
 # Allow admin user to execute cron command as sudo w/o password.
 cronCommand="scripts/logoutUser.sh"
