@@ -46,8 +46,10 @@ chmod 744 /Users/admin/scripts/startup.sh
 
 # Start screen saver after 5 minutes
 
-# Require password to unlock immediately after screen saver begins (askforpasswordimmediately.mobileconfig)
-# TODO: install all mobileconfigs through a loop.
+# Install all mobileconfig profiles in folder
+for filename in profiles/*.mobileconfig; do
+    /usr/bin/profiles -I -F profiles/$filename
+done
 /usr/bin/profiles -I -F profiles/askforpasswordimmediately.mobileconfig
 
 # Allow admin user to execute cron command as sudo w/o password.
