@@ -17,7 +17,7 @@
     <string>cy.ac.ucy.library.mac.startup</string>
     <key>Program</key>
     <!-- Full Path to the Script File. -->
-    <string>/Users/library/scripts/startup/startup.sh</string>
+    <string>/Users/library/scripts/startup.sh</string>
     <!-- This key is used to start the job as soon as it has been loaded. For daemons this means execution at boot time, for agents execution at login. -->
     <key>RunAtLoad</key>
     <true/>
