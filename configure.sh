@@ -41,6 +41,8 @@ sudo systemsetup -setdisplaysleep 60
 mkdir /Users/admin/scripts
 # Install force logout & shutdown
 cp scripts/ /Users/admin/scripts
+chmod 744 /Users/admin/scripts/logoutUser.sh
+chmod 744 /Users/admin/scripts/startup.sh
 
 # Start screen saver after 5 minutes
 
