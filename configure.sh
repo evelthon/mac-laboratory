@@ -39,6 +39,7 @@ sudo systemsetup -setdisplaysleep 60
 
 # Create folder to store scripts and copy them
 mkdir /Users/admin/scripts
+# Install force logout & shutdown
 cp scripts/ /Users/admin/scripts
 
 # Start screen saver after 5 minutes
@@ -46,7 +47,7 @@ cp scripts/ /Users/admin/scripts
 # Require password to unlock immediately after screen saver begins (askforpasswordimmediately.mobileconfig)
 /usr/bin/profiles -I -F profiles/askforpasswordimmediately.mobileconfig
 
-# Install force logout & shutdown
+
 
 # Install profile clean-up script & plist
 
