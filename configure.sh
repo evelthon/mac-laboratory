@@ -65,8 +65,9 @@ else
 fi
 
 # Install profile clean-up script & plist
-
-
+cp requirements/com.papercut.client.plist /Library/LaunchAgents/com.papercut.client.plist  
+cp requirements/cy.ac.ucy.library.mac.startup.plist /Library/LaunchDaemons/cy.ac.ucy.library.mac.startup.plist
+chmod 644 /Library/LaunchAgents/com.papercut.client.plist /Library/LaunchDaemons/cy.ac.ucy.library.mac.startup.plist
 
 
 # Add cronjob for shutdown procedure (execute at 00:15)
