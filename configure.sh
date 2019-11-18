@@ -9,7 +9,8 @@ osascript -e 'tell application "System Preferences" to quit'
 
 # TODO: Set desired computer name
 read -s -p "Enter desired computer name: " computerName
-echo $computerName
+scutil --set ComputerName $computerName
+echo "Computer name set to ${$computerName}"
 
 # Id not added to AD, do a BIND  
 currentDomain=$(dsconfigad -show | awk '/Active Directory Domain/{print $NF}')
