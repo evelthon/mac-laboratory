@@ -86,3 +86,7 @@ chmod 644 /Library/LaunchAgents/com.papercut.client.plist /Library/LaunchDaemons
 # 15 0 * * * sudo /Users/admin/scripts/logoutUser.sh >/dev/null 2>&1 
 (crontab -l 2>/dev/null; echo "15 0 * * * sudo /Users/admin/scripts/logoutUser.sh >/dev/null 2>&1 ") | crontab -
 
+
+# Final step
+echo "Copy PCClient.app to /Applications/PCClient.app and you are done."
+
