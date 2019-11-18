@@ -11,5 +11,8 @@ Create a mac with the following characteristics:
 - Boot daily @ 07:30
 - Shut down daily @ 00:15
 
+## Assumptions
+The local administrator user is ```admin```
+
 ## Join AD
 ```dsconfigad -add domain -username value [-computer value] [-force] [-password value] [-ou dn] [-preferred server] [-localuser value] [-localpassword value]```
