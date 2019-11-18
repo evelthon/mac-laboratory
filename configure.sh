@@ -1,5 +1,8 @@
 #!/bin/sh
  
+# Check for root/sudo access
+if [[ $(id -u) -ne 0 ]] ; then echo "Please run as root or a user with sudo privileges" ; exit 1 ; fi
+
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
 osascript -e 'tell application "System Preferences" to quit'
