@@ -66,14 +66,14 @@ done
 cronCommand="scripts/logoutUser.sh"
 # Do not evaluate the output of grep but rather its return value
 # -F option to grep is to prevent it from interpreting regular expression metacharacters
-if grep -qF "$cronCommand" /etc/sudoers;then
+if [ grep -qF "$cronCommand" /etc/sudoers  ] || [ grep -qF "$cronCommand" /etc/sudoers.d/99_sudo_logout ] ; then
    echo "Found it"
 else
    echo "Adding command to sudoers."
    # echo '%admin          ALL=(ALL) NOPASSWD: /Users/admin/scripts/logoutUser.sh' | sudo EDITOR='tee -a' visudo
    
    # Or even better place file in sudoers.d to avoid editing main sudoers file.
-   bash -c 'echo "%admin          ALL=(ALL) NOPASSWD: /Users/admin/scripts/logoutUser.sh" >> /etc/sudoers.d/99_sudo_include_file'
+   bash -c 'echo "%admin          ALL=(ALL) NOPASSWD: /Users/admin/scripts/logoutUser.sh" >> /etc/sudoers.d/99_sudo_logout'
 fi
 
 # Install profile clean-up script & plist
