@@ -8,9 +8,9 @@ if [[ $(id -u) -ne 0 ]] ; then echo "Please run as root or a user with sudo priv
 osascript -e 'tell application "System Preferences" to quit'
 
 # TODO: Set desired computer name
-read -s -p "Enter desired computer name: " computerName
+read -p "Enter desired computer name: " computerName
 scutil --set ComputerName $computerName
-echo "Computer name set to ${$computerName}"
+echo "Computer name set to ${computerName}"
 
 # Set auto-restart on freeze
 systemsetup -setrestartfreeze on
@@ -18,13 +18,13 @@ systemsetup -setrestartfreeze on
 # Id not added to AD, do a BIND  
 currentDomain=$(dsconfigad -show | awk '/Active Directory Domain/{print $NF}')
 # Bind, if not binded
-if [[ $currentDomain -ne 'ucy.ac.cy' ]]; then
+if [ $currentDomain != "ucy.ac.cy" ]; then
   echo "Binding to domain."
-  read -s -p "Enter local user: " localUser
+  read -p "Enter local user: " localUser
   echo $localUser
-  read -s -p "Enter local password: " localPass
-  read -s -p "Enter domain user: " domain
-  read -s -p "Enter domain password: " domainPass
+  read -p "Enter local password: " localPass
+  read -p "Enter domain user: " domain
+  read -p "Enter domain password: " domainPass
   
   dsconfigad -add domain -username $domainUser [-computer value] [-force] -password $domainPass [-ou dn] -preferred 'ucy.ac.cy' -localuser $localUser -localpassword $localPass
   #exit 1
@@ -59,7 +59,8 @@ chmod 744 /Users/admin/scripts/startup.sh
 
 # Install all mobileconfig profiles in folder
 for filename in profiles/*.mobileconfig; do
-    /usr/bin/profiles -I -F profiles/$filename
+	echo $filename
+    /usr/bin/profiles -I -F "$filename"
 done
 
 # Allow admin user to execute cron command as sudo w/o password.
