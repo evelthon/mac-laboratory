@@ -5,7 +5,7 @@ notes and scripts for setting up laboratory macs for many users
 Create a mac with the following characteristics:
 - Allow login using AD user
 - Print through a network Papercut printer
-- Do not display welcome wizard on first login
+- Do not display welcome wizards on first login
 - Shut down mac daily, ignoring any logged-in users
 - Clear existing user profiles on boot
 - Boot daily @ 07:30
