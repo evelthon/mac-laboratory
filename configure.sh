@@ -12,6 +12,9 @@ read -s -p "Enter desired computer name: " computerName
 scutil --set ComputerName $computerName
 echo "Computer name set to ${$computerName}"
 
+# Set auto-restart on freeze
+systemsetup -setrestartfreeze on
+
 # Id not added to AD, do a BIND  
 currentDomain=$(dsconfigad -show | awk '/Active Directory Domain/{print $NF}')
 # Bind, if not binded
