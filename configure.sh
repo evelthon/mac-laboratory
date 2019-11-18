@@ -34,6 +34,10 @@ fi
 # Install Kyocera driver
 sudo installer -verbose -pkg Kyocera\ OS\ X\ 10.5+\ build\ 2016.05.15.pkg -target /
 
+# Install network printer#
+# /Library/Printers/PPDs/Contents/Resources/Kyocera\ TASKalfa\ 4052ci.PPD
+/usr/sbin/lpadmin -p PRINT1 -o Option18=HardDisk -o Option19=One -o Option26=True -o Resolution=1200dpi -o auth-info-required=negotiate -o printer-error-policy=abort-job -o printer-is-shared="False" -E -v smb://<print_server>/<print_queue> -P /Library/Printers/PPDs/Contents/Resources/Kyocera\ TASKalfa\ 4052ci.PPD -D "Papercut printer"
+
 # Instal Papercut client & install plist
 
 
