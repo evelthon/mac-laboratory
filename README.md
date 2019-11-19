@@ -17,9 +17,9 @@ Create a mac with the following characteristics:
 - The local administrator user is ```admin```
 
 ## Execution
-Clone or download repository
-Edit ```configure.sh``` and set you desired print server and print queue ```smb://<print_server>/<print_queue>```
-Execute with ```sudo ./configure.sh```
+1. Clone or download repository
+2. Edit ```configure.sh``` and set you desired print server and print queue ```smb://<print_server>/<print_queue>```
+3. Execute with ```sudo ./configure.sh```
 
 ## Notes
 ```dsconfigad ``` command is not yet configured.
