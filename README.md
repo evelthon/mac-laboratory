@@ -18,7 +18,7 @@ Create a mac with the following characteristics:
 
 ## Execution
 Clone or download repository
-
+Edit ```configure.sh``` and set you desired print server and print queue ```smb://<print_server>/<print_queue>```
 Execute with ```sudo ./configure.sh```
 
 ## Notes
