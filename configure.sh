@@ -10,7 +10,7 @@ osascript -e 'tell application "System Preferences" to quit'
 # TODO: Set desired computer name
 read -p "Enter desired computer name: " computerName
 scutil --set ComputerName $computerName
-echo "Computer name set to ${computerName}"
+echo "Computer name set to ${computerName}\n"
 
 # Set auto-restart on freeze
 systemsetup -setrestartfreeze on
@@ -67,8 +67,8 @@ done
 cronCommand="scripts/shutdown.sh"
 # Do not evaluate the output of grep but rather its return value
 # -F option to grep is to prevent it from interpreting regular expression metacharacters
-if [ grep -qF "$cronCommand" /etc/sudoers.d/99_sudo_logout ] ; then
-   echo "Shutdown script previously setup."
+if grep -qF "$cronCommand" /etc/sudoers.d/99_sudo_logout ; then
+   echo "Shutdown script already installed to cron."
 else
    echo "Adding command to sudoers."
    # echo '%admin          ALL=(ALL) NOPASSWD: /Users/admin/scripts/logoutUser.sh' | sudo EDITOR='tee -a' visudo
@@ -85,9 +85,11 @@ chmod 644 /Library/LaunchAgents/com.papercut.client.plist /Library/LaunchDaemons
 
 # Add cronjob for shutdown procedure (execute at 00:15)
 # 15 0 * * * sudo /Users/admin/scripts/shutdown.sh >/dev/null 2>&1 
-(crontab -l 2>/dev/null; echo "15 0 * * * sudo /Users/admin/scripts/shutdown.sh >/dev/null 2>&1 ") | crontab -
+(crontab -l 2>/dev/null; echo "15 0 * * * sudo /Users/admin/scripts/shutdown.sh >/dev/null 2>&1 ") | crontab - admin
 
 
 # Final step
+echo "###"
 echo "Copy PCClient.app to /Applications/PCClient.app and you are done."
-
+echo "and chmod 755"
+echo "###"
