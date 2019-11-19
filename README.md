@@ -21,5 +21,5 @@ Clone or download repository
 
 Execute with ```sudo ./configure.sh```
 
-## Join AD
-```dsconfigad -add domain -username value [-computer value] [-force] [-password value] [-ou dn] [-preferred server] [-localuser value] [-localpassword value]```
+## Notes
+```dsconfigad ``` command is not yet configured.
