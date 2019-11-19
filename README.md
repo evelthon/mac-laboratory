@@ -1,6 +1,8 @@
 # mac-laboratory
 notes and scripts for setting up laboratory macs for many users
 
+
+
 ## Purpose
 Create a mac with the following characteristics:
 - Allow login using AD user
@@ -12,7 +14,12 @@ Create a mac with the following characteristics:
 - Shut down daily @ 00:15
 
 ## Assumptions
-The local administrator user is ```admin```
+- The local administrator user is ```admin```
 
-## Join AD
-```dsconfigad -add domain -username value [-computer value] [-force] [-password value] [-ou dn] [-preferred server] [-localuser value] [-localpassword value]```
+## Execution
+Clone or download repository
+Edit ```configure.sh``` and set you desired print server and print queue ```smb://<print_server>/<print_queue>```
+Execute with ```sudo ./configure.sh```
+
+## Notes
+```dsconfigad ``` command is not yet configured.
