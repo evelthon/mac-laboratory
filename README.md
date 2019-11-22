@@ -23,6 +23,7 @@ Create a mac with the following characteristics:
 
 ## Assumptions
 - The local administrator user is ```admin```
+- You can add and/or remove mobileconfig profiles as you see fit.
 
 ## Execution
 1. Clone or download repository
