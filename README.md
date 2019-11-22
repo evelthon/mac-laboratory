@@ -3,7 +3,7 @@ notes and scripts for setting up laboratory macs for many users. This is a work 
 ![image1](./images/Mac_lab.png)
 
 
-
+##### License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
 
 ## Purpose
