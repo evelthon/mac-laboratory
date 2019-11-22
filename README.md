@@ -1,5 +1,5 @@
 # mac-laboratory
-notes and scripts for setting up laboratory macs for many users
+notes and scripts for setting up laboratory macs for many users. This is a work in progress.
 
 
 
@@ -19,7 +19,5 @@ Create a mac with the following characteristics:
 ## Execution
 1. Clone or download repository
 2. Edit ```configure.sh``` and set you desired print server and print queue ```smb://<print_server>/<print_queue>```
-3. Execute with ```sudo ./configure.sh```
-
-## Notes
-```dsconfigad ``` command is not yet configured.
+3. Edit profiles/ activeDirectoryPayload.mobileconfig and replace ```YOUR_DOMAIN```, ```YOUR_NETWORK_USERNAME```,  ```YOUR_NETWORK_USERNAME``` and ```YOUR_ORG_OU```. Your AD administrator will provide you with these information.
+4. Execute with ```sudo ./configure.sh```
