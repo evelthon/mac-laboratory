@@ -7,6 +7,7 @@ notes and scripts for setting up laboratory macs for many users. This is a work 
 Create a mac with the following characteristics:
 - Set desired computer name
 - Restart on freeze
+- Disable sleep command in Apple Menu
 - Allow login using AD user
 - Print through a network Papercut printer
 - Do not display welcome wizards on first login
