@@ -10,29 +10,31 @@ osascript -e 'tell application "System Preferences" to quit'
 # TODO: Set desired computer name
 read -p "Enter desired computer name: " computerName
 scutil --set ComputerName $computerName
-echo "Computer name set to ${computerName}\n"
+echo "Computer name set to ${computerName}.\n"
 
 # Set auto-restart on freeze
 systemsetup -setrestartfreeze on
+echo "System set to restart on freeze.\n"
 
 # Disable sleep command in Apple Menu
 defaults write /Library/Preferences/SystemConfiguration/com.apple.PowerManagement SystemPowerSettings -dict SleepDisabled -bool YES
-echo "Disabled sleep command in Apple Menu"
+echo "Disabled sleep command in Apple Menu\n"
 # Install Kyocera driver
 sudo installer -verbose -pkg requirements/Kyocera\ OS\ X\ 10.9+\ Web\ build\ 2018.10.08.pkg -target /
+echo "Printer driver installed.\n"
 
 # Install network printer#
 # /Library/Printers/PPDs/Contents/Resources/Kyocera\ TASKalfa\ 4052ci.PPD
 /usr/sbin/lpadmin -p PRINT1 -o Option18=HardDisk -o Option19=One -o Option26=True -o Resolution=1200dpi -o auth-info-required=negotiate -o printer-error-policy=abort-job -o printer-is-shared="False" -E -v smb://<print_server>/<print_queue> -P /Library/Printers/PPDs/Contents/Resources/Kyocera\ TASKalfa\ 4052ci.PPD -D "Papercut printer"
-
-# Instal Papercut client & install plist
-
+echo "Added network printer.\n"
 
 # Wake-up/Boot daily at 07:30
 sudo pmset repeat wakeorpoweron MTWRFSU 07:30:00
+echo "Computer set to power-on daily at 07:30.\n"
 
 # Set display sleep after 60 minutes, when connected on power adapter
 sudo systemsetup -setdisplaysleep 60
+echo "Display sleep time set to 60 minutes.\n"
 
 
 # Create folder (if it does not exist) to store scripts and copy them
@@ -55,9 +57,9 @@ cronCommand="scripts/shutdown.sh"
 # Do not evaluate the output of grep but rather its return value
 # -F option to grep is to prevent it from interpreting regular expression metacharacters
 if grep -qF "$cronCommand" /etc/sudoers.d/99_sudo_logout ; then
-   echo "Shutdown script already installed in sudoers."
+   echo "Shutdown script already installed in sudoers.\n"
 else
-   echo "Adding command to sudoers."
+   echo "Adding command to sudoers.\n"
    # echo '%admin          ALL=(ALL) NOPASSWD: /Users/admin/scripts/logoutUser.sh' | sudo EDITOR='tee -a' visudo
    
    # Or even better place file in sudoers.d to avoid editing main sudoers file.
@@ -76,8 +78,8 @@ chmod 644 /Library/LaunchAgents/com.papercut.client.plist /Library/LaunchDaemons
 
 
 # Final step
-echo "###"
+echo "\n\n###"
 echo "Copy PCClient.app to /Applications/PCClient.app"
 echo "and chmod 755"
-echo "###"
-echo "Some settings require a restart."
+echo "\n\n###\n"
+echo "Some settings require a restart.\n"
