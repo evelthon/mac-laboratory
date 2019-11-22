@@ -17,7 +17,7 @@ systemsetup -setrestartfreeze on
 
 # Disable sleep command in Apple Menu
 defaults write /Library/Preferences/SystemConfiguration/com.apple.PowerManagement SystemPowerSettings -dict SleepDisabled -bool YES
-
+echo "Disabled sleep command in Apple Menu"
 # Install Kyocera driver
 sudo installer -verbose -pkg requirements/Kyocera\ OS\ X\ 10.9+\ Web\ build\ 2018.10.08.pkg -target /
 
@@ -80,3 +80,4 @@ echo "###"
 echo "Copy PCClient.app to /Applications/PCClient.app"
 echo "and chmod 755"
 echo "###"
+echo "Some settings require a restart."
