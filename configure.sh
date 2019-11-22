@@ -15,22 +15,6 @@ echo "Computer name set to ${computerName}\n"
 # Set auto-restart on freeze
 systemsetup -setrestartfreeze on
 
-# Id not added to AD, do a BIND  
-currentDomain=$(dsconfigad -show | awk '/Active Directory Domain/{print $NF}')
-# Bind, if not binded
-if [ $currentDomain != "ucy.ac.cy" ]; then
-  echo "Binding to domain."
-  read -p "Enter local user: " localUser
-  echo $localUser
-  read -p "Enter local password: " localPass
-  read -p "Enter domain user: " domain
-  read -p "Enter domain password: " domainPass
-  
-  dsconfigad -add domain -username $domainUser [-computer value] [-force] -password $domainPass [-ou dn] -preferred 'ucy.ac.cy' -localuser $localUser -localpassword $localPass
-  #exit 1
-fi
-
-
 # Install Kyocera driver
 sudo installer -verbose -pkg requirements/Kyocera\ OS\ X\ 10.9+\ Web\ build\ 2018.10.08.pkg -target /
 
