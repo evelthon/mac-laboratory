@@ -19,6 +19,8 @@ Create a mac with the following characteristics:
 - Boot daily @ 07:30
 - Shut down daily @ 00:15
 
+![image3](./images/example.gif)
+
 ## Assumptions
 - The local administrator user is ```admin```
 
