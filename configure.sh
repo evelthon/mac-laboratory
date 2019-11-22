@@ -55,7 +55,7 @@ cronCommand="scripts/shutdown.sh"
 # Do not evaluate the output of grep but rather its return value
 # -F option to grep is to prevent it from interpreting regular expression metacharacters
 if grep -qF "$cronCommand" /etc/sudoers.d/99_sudo_logout ; then
-   echo "Shutdown script already installed to cron."
+   echo "Shutdown script already installed in sudoers."
 else
    echo "Adding command to sudoers."
    # echo '%admin          ALL=(ALL) NOPASSWD: /Users/admin/scripts/logoutUser.sh' | sudo EDITOR='tee -a' visudo
