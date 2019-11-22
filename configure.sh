@@ -78,8 +78,8 @@ chmod 644 /Library/LaunchAgents/com.papercut.client.plist /Library/LaunchDaemons
 
 
 # Final step
-echo "\n\n###"
-echo "Copy PCClient.app to /Applications/PCClient.app"
+echo "\n\n################################################"
+echo "Do not forget to copy PCClient.app to /Applications/PCClient.app"
 echo "and chmod 755"
-echo "\n\n###\n"
+echo "################################################\n\n"
 echo "Some settings require a restart.\n"
