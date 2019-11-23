@@ -82,6 +82,10 @@ chmod 644 /Library/LaunchAgents/com.papercut.client.plist /Library/LaunchDaemons
 # Caps lock switch lang
 # defaults write com.apple.TextInputMenuAgent "NSStatusItem Visible Item-0" -int 0
 
+# Require password immediately after screen saver begins
+# defaults write com.apple.screensaver askForPassword -int 1
+# defaults write com.apple.screensaver askForPasswordDelay -int 0
+
 # Final step
 echo "\n\n################################################"
 echo "Do not forget to copy PCClient.app to /Applications/PCClient.app"
