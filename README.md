@@ -12,6 +12,7 @@ Create a mac with the following characteristics:
 - Restart on freeze
 - Disable sleep command in Apple Menu
 - Allow login using AD user
+- Install Kyocera driver
 - Print through a network Papercut printer
 - Do not display welcome wizards on first login
 - Shut down mac daily, ignoring any logged-in users
