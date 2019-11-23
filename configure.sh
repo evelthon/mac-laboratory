@@ -79,6 +79,8 @@ chmod 644 /Library/LaunchAgents/com.papercut.client.plist /Library/LaunchDaemons
 # Show input menu in menu bar
 #  defaults write  com.apple.TextInputMenu visible -int 1
 
+# Caps lock switch lang
+# defaults write com.apple.TextInputMenuAgent "NSStatusItem Visible Item-0" -int 0
 
 # Final step
 echo "\n\n################################################"
