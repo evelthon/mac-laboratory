@@ -15,9 +15,13 @@
     <key>Label</key>
     <!-- By convention, easy launchctl proccesses have unique name as an identifier. To follow naming convention the name of the file should be the same as the identifier name -->
     <string>cy.ac.ucy.library.mac.userstartup</string>
-    <key>Program</key>
+    <key>ProgramArguments</key>
     <!-- Full Path to the Script File. -->
-    <string>/Users/admin/scripts/login.sh</string>
+    <array>
+          <string>/bin/sh</string>
+          <string>/Users/admin/scripts/login.sh</string>
+    </array>
+   
     <!-- This key is used to start the job as soon as it has been loaded. For daemons this means execution at boot time, for agents execution at login. -->
     <key>RunAtLoad</key>
     <true/>
@@ -29,10 +33,10 @@
     <true/>
     <!-- For debugging it is useful to print the output on a tmp file. While tweaking the script file with the script loaded onto the Daemon, it will echo script outputs-->
     <key>StandardOutPath</key>
-    <string>/tmp/startup.stdout</string>
+    <string>/tmp/userstartup.stdout</string>
     <!-- For debugging it is useful to print the errors on a tmp file. While tweaking the script file with the script loaded onto the Daemon, it will print errors on this file-->
     <key>StandardErrorPath</key>
-    <string>/tmp/startup.stderr</string>
+    <string>/tmp/userstartup.stderr</string>
     <!-- By default, Launch Daemon Process will run the script as root. But you still have the option to set the username and group to use while executing the script-->
     <!--<key>UserName</key>
     <string>admin</string>
