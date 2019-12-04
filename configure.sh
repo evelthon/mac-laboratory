@@ -68,10 +68,10 @@ else
 fi
 
 # Install profile clean-up script & plist
-cp requirements/com.apple.HIToolbox.plist /Library/Preferences/com.apple.HIToolbox.plist 
-cp requirements/cy.ac.ucy.library.mac.userstartup.plist /Library/LaunchAgents/cy.ac.ucy.library.mac.userstartup.plist 
-cp requirements/com.papercut.client.plist /Library/LaunchAgents/com.papercut.client.plist  
-cp requirements/cy.ac.ucy.library.mac.startup.plist /Library/LaunchDaemons/cy.ac.ucy.library.mac.startup.plist
+rm -f /Library/Preferences/com.apple.HIToolbox.plist && cp requirements/com.apple.HIToolbox.plist /Library/Preferences/com.apple.HIToolbox.plist 
+rm -f /Library/LaunchAgents/cy.ac.ucy.library.mac.userstartup.plist && cp requirements/cy.ac.ucy.library.mac.userstartup.plist /Library/LaunchAgents/cy.ac.ucy.library.mac.userstartup.plist 
+rm -f /Library/LaunchAgents/com.papercut.client.plist && cp requirements/com.papercut.client.plist /Library/LaunchAgents/com.papercut.client.plist  
+rm -f /Library/LaunchDaemons/cy.ac.ucy.library.mac.startup.plist && cp requirements/cy.ac.ucy.library.mac.startup.plist /Library/LaunchDaemons/cy.ac.ucy.library.mac.startup.plist
 chmod 644 /Library/LaunchAgents/com.papercut.client.plist /Library/LaunchDaemons/cy.ac.ucy.library.mac.startup.plist /Library/LaunchAgents/cy.ac.ucy.library.mac.userstartup.plist 
 
 
