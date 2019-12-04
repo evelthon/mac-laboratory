@@ -40,10 +40,10 @@ echo "Display sleep time set to 60 minutes.\n"
 # Create folder (if it does not exist) to store scripts and copy them
 mkdir -p /Users/admin/scripts
 # Install companion scripts
-cp scripts/* /Users/admin/scripts/
+rm -f /Users/admin/scripts/* && cp scripts/* /Users/admin/scripts/
 chmod 744 /Users/admin/scripts/shutdown.sh
 chmod 744 /Users/admin/scripts/startup.sh
-chmod 744 /Users/admin/scripts/login.sh
+chmod 755 /Users/admin/scripts/login.sh
 
 # Start screen saver after 5 minutes
 
