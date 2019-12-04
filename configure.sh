@@ -89,6 +89,9 @@ chmod 644 /Library/LaunchAgents/com.papercut.client.plist /Library/LaunchDaemons
 # defaults write com.apple.screensaver askForPassword -int 1
 # defaults write com.apple.screensaver askForPasswordDelay -int 0
 
+# Enable two button mouse (right-click)
+# defaults write com.apple.driver.AppleBluetoothMultitouch.mouse MouseButtonMode TwoButton
+
 # Final step
 echo "\n\n################################################"
 echo "Do not forget to copy PCClient.app to /Applications/PCClient.app"
