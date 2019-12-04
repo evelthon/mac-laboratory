@@ -10,7 +10,8 @@ notes and scripts for setting up laboratory macs for many users. This is a work 
 Create a mac with the following characteristics:
 - Set desired computer name
 - Restart on freeze
-- Disable sleep command in Apple Menu
+- Disable sleep command in Apple Menu and remove from Login window.
+- Remove Shutdown from Apple Menu and Login window. 
 - Allow login using AD user
 - Install Kyocera driver
 - Print through a network Papercut printer
