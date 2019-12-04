@@ -37,3 +37,6 @@ Create a mac with the following characteristics:
 A confirmation will pop-up during execution about Terminal trying to administer your computer. This is expected. Click OK.
 
 ![image1](./images/Terminal_admin.png)
+
+## Attributions
+- https://github.com/rtrouton/profiles
