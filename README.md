@@ -19,6 +19,7 @@ Create a mac with the following characteristics:
 - Clear existing user profiles on boot
 - Boot daily @ 07:30
 - Shut down daily @ 00:15
+- Enable multiple languages for all users, and auto-activate the input menu in the menu bar. (Note: this currently enables english & greek - will be updated with instructions on adding other languages)
 
 ![image3](./images/example.gif)
 
@@ -39,4 +40,4 @@ A confirmation will pop-up during execution about Terminal trying to administer 
 ![image1](./images/Terminal_admin.png)
 
 ## Attributions
-- https://github.com/rtrouton/profiles
+- Management profiles for OS X / macOS https://github.com/rtrouton/profiles
