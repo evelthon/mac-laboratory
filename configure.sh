@@ -43,6 +43,7 @@ mkdir -p /Users/admin/scripts
 cp scripts/* /Users/admin/scripts/
 chmod 744 /Users/admin/scripts/shutdown.sh
 chmod 744 /Users/admin/scripts/startup.sh
+chmod 744 /Users/admin/scripts/login.sh
 
 # Start screen saver after 5 minutes
 
@@ -67,9 +68,11 @@ else
 fi
 
 # Install profile clean-up script & plist
+cp requirements/com.apple.HIToolbox.plist /Library/Preferences/com.apple.HIToolbox.plist 
+cp requirements/cy.ac.ucy.library.mac.userstartup.plist /Library/LaunchAgents/cy.ac.ucy.library.mac.userstartup.plist 
 cp requirements/com.papercut.client.plist /Library/LaunchAgents/com.papercut.client.plist  
 cp requirements/cy.ac.ucy.library.mac.startup.plist /Library/LaunchDaemons/cy.ac.ucy.library.mac.startup.plist
-chmod 644 /Library/LaunchAgents/com.papercut.client.plist /Library/LaunchDaemons/cy.ac.ucy.library.mac.startup.plist
+chmod 644 /Library/LaunchAgents/com.papercut.client.plist /Library/LaunchDaemons/cy.ac.ucy.library.mac.startup.plist /Library/LaunchAgents/cy.ac.ucy.library.mac.userstartup.plist 
 
 
 # Add cronjob for shutdown procedure (execute at 00:15)
