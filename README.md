@@ -1,5 +1,5 @@
 # mac-laboratory
-notes and scripts for setting up laboratory macs for many users. This is a work in progress.
+Configuration script for setting up laboratory macs for many users. This is a work in progress.
 ![image1](./images/Mac_lab.png)
 
 
