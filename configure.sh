@@ -16,6 +16,9 @@ echo "Computer name set to ${computerName}.\n"
 systemsetup -setrestartfreeze on
 echo "System set to restart on freeze.\n"
 
+# Set sleep time
+systemsetup -setdisplaysleep 60 -setharddisksleep 60 -setcomputersleep 10
+
 # Disable sleep command in Apple Menu
 defaults write /Library/Preferences/SystemConfiguration/com.apple.PowerManagement SystemPowerSettings -dict SleepDisabled -bool YES
 echo "Disabled sleep command in Apple Menu\n"
