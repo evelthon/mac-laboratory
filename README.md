@@ -7,7 +7,7 @@ Configuration script for setting up laboratory macs for many users. This is a wo
 
 
 ## Purpose
-Create a mac with the following characteristics:
+Configure your iMac with the following characteristics:
 - Set desired computer name
 - Restart on freeze
 - Disable sleep command in Apple Menu and remove from Login window.
