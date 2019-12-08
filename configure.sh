@@ -35,11 +35,6 @@ echo "Added network printer.\n"
 sudo pmset repeat wakeorpoweron MTWRFSU 07:30:00
 echo "Computer set to power-on daily at 07:30.\n"
 
-# Set display sleep after 60 minutes, when connected on power adapter
-sudo systemsetup -setdisplaysleep 60
-echo "Display sleep time set to 60 minutes.\n"
-
-
 # Create folder (if it does not exist) to store scripts and copy them
 mkdir -p /Users/admin/scripts
 # Install companion scripts
