@@ -47,6 +47,7 @@ rm -f /Users/admin/scripts/* && cp scripts/* /Users/admin/scripts/
 chmod 744 /Users/admin/scripts/shutdown.sh
 chmod 744 /Users/admin/scripts/startup.sh
 chmod 755 /Users/admin/scripts/login.sh
+echo "Shell scripts installed.\n"
 
 # Start screen saver after 5 minutes
 
@@ -55,6 +56,7 @@ for filename in profiles/*.mobileconfig; do
 	# echo $filename
     /usr/bin/profiles -I -F "$filename"
 done
+echo "Mobileconfig profiles installed.\n"
 
 # Allow admin user to execute cron command as sudo w/o password.
 cronCommand="scripts/shutdown.sh"
@@ -76,7 +78,7 @@ rm -f /Library/LaunchAgents/cy.ac.ucy.library.mac.userstartup.plist && cp requir
 rm -f /Library/LaunchAgents/com.papercut.client.plist && cp requirements/com.papercut.client.plist /Library/LaunchAgents/com.papercut.client.plist  
 rm -f /Library/LaunchDaemons/cy.ac.ucy.library.mac.startup.plist && cp requirements/cy.ac.ucy.library.mac.startup.plist /Library/LaunchDaemons/cy.ac.ucy.library.mac.startup.plist
 chmod 644 /Library/LaunchAgents/com.papercut.client.plist /Library/LaunchDaemons/cy.ac.ucy.library.mac.startup.plist /Library/LaunchAgents/cy.ac.ucy.library.mac.userstartup.plist 
-
+echo "plist files installed.\n"
 
 # Add cronjob for shutdown procedure (execute at 00:15)
 # 15 0 * * * sudo /Users/admin/scripts/shutdown.sh >/dev/null 2>&1 
