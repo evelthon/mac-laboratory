@@ -9,7 +9,12 @@ osascript -e 'tell application "System Preferences" to quit'
 
 # TODO: Set desired computer name
 read -p "Enter desired computer name: " computerName
+# The user-friendly name for the system.
 scutil --set ComputerName $computerName
+# The local (Bonjour) host name.
+scutil --set LocalHostName $computerName
+# The name associated with hostname(1) and gethostname(3).
+scutil --set HostName $computerName
 echo "Computer name set to ${computerName}.\n"
 
 # Set auto-restart on freeze
