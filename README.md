@@ -20,7 +20,7 @@ Configure your iMac with the following characteristics:
 - Clear existing user profiles on boot
 - Boot daily @ 07:30
 - Shut down daily @ 00:15
-- AppStore and OS update parameters
+- App Store and OS update parameters
 - Screensaver options
 - Enable multiple languages for all users, and auto-activate the input menu in the menu bar. (Note: this currently enables english & greek - will be updated with instructions on adding other languages)
 
