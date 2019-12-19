@@ -34,8 +34,9 @@ Configure your iMac with the following characteristics:
 2. Edit ```profiles/activeDirectoryPayload.mobileconfig``` and replace ```YOUR_DOMAIN```, ```YOUR_NETWORK_USERNAME```,  ```YOUR_NETWORK_USERNAME``` and ```YOUR_ORG_OU```. Your AD administrator will provide you with these information. (Note: YOUR_DOMAIN requires the server's fqdn).
 
 ## Execution
-- Clone or download repository
-- Execute with ```sudo ./configure.sh```
+- Clone or download repository.
+- Execute with ```sudo ./configure.sh```.
+- When finished, enable ```fast user switching```.
 
 A confirmation will pop-up during execution about Terminal trying to administer your computer. This is expected. Click OK.
 
