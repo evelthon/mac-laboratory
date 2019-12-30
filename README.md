@@ -44,3 +44,6 @@ A confirmation will pop-up during execution about Terminal trying to administer 
 
 ## Attributions
 - Management profiles for OS X / macOS https://github.com/rtrouton/profiles
+
+### Related bugs
+- Fast User Switching on the lock screen when there's only one local account https://openradar.appspot.com/12219115
